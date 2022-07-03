@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fauzan's Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<?php
+if(!empty($_POST["send"])) {
+	$name = $_POST["name"];
+  $email = $_POST["email"];
+	$message = $_POST["message"];
+	$toEmail = "r.fauzantaufik@gmail.com";
+  
+	$mailHeaders = "Name: " . $name .
+	"\r\n Email: ". $email  .
+	"\r\n Message: " . $message . "\r\n";
+
+	if(mail($toEmail, $userName, $mailHeaders)) {
+	    $message = "Your contact information is received successfully.";
+	}
+}
+?>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">My Portfolio</a></h1>
+						<nav>
+							<a href="#banner">Home</a>
+							<a href="#one">Skills</a>
+							<a href="#four">Portfolio</a>
+							<a href="#footer">Contact</a>
+						</nav>
+					</header>
+
+				<!-- Menu 
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#one">Skills</a></li>
+								<li><a href="#">Portfolio</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav> -->
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon solid fa-user"></span></div>
+							<h2>Fauzan Taufik Rahman</h2>
+							<p>Data Analyst Associate + Visit my <a href="https://www.linkedin.com/in/fauzantr" target="_blank">LinkedIn</a></p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a class="image"><img src="images/pic01.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Programming Language</h2>
+										<p>SQL, Phyton (Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a class="image"><img src="images/pic02.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Analytical Techniques</h2>
+										<p>Exploratory Data Analysis (EDA), Descriptive Statistics, Data Visualization, Correlation Analysis, Cohort, Funnel,
+											Clustering, Regression, Data Modelling, Data Mapping, Entity Relational Diagram (ERD)</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a class="image"><img src="images/pic03.jpg" alt="" /></a>
+									<div class="content">
+										<h2 class="major">Analytical Tools</h2>
+										<p>Spreadsheets, BigQuery, Google Collab, Google Data Studio, Tableau</p>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Recent Projects</h2>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/kpi dashboard.jpg" alt="" /></a>
+											<h3 class="major">KPI Dashboard Creation</h3>
+											<p>Create a specific dashboard for each of the following users in C-Level, Product & Sales, and Marketing.</p>
+											<a href="https://docs.google.com/presentation/d/18hz8MWN7ACBkYfesa10VEw305COlegRg79TXdckvayU/edit?usp=sharing" target="_blank" class="special">Full Project (Click here)</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/group-project.jpg" alt="" /></a>
+											<h3 class="major">Passenger Satisfaction Analysis</h3>
+											<p>Analyze the data using 3 methods (EDA, Correlation and Clustering Analysis) to identify which services need to be improved to increase customer satisfaction.</p>
+											<a href="https://www.canva.com/design/DAFBZzawX7Y/q30BuRiVnDIE-Xi0Iu4_cQ/view?utm_content=DAFBZzawX7Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" class="special">Full Project (Click here)</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/tableau.jpg" alt="" /></a>
+											<h3 class="major">Data Visualization (Tableau)</h3>
+											<p>Exploratory Data Analysis (EDA) and designing interactive charts and dashboards using Tableau as a tool.</p>
+											<a href="https://docs.google.com/presentation/d/14WPL8i-HYVVnhj4QBXUYOjTZgk2cVKSVJuefOjOSNT0/edit?usp=sharing" target="_blank" class="special">Full Project (Click here)</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/python.jpg" alt="" /></a>
+											<h3 class="major">Phyton (Google Colab)</h3>
+											<p>Combine datasets, remove irrelevant value/column, handling missing value/column, removing duplicates, handling outliers, converting data types, EDA, provide insights and visualize the dataset using Python as a tool, Google Colab to be specific.</p>
+											<a href="https://colab.research.google.com/drive/1FTnOP7lGNfxnrgl7O-e5bICNnGfupf-U?usp=sharing" target="_blank" class="special">Full Project (Click here)</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/bigquery.jpg" alt="" /></a>
+											<h3 class="major">SQL (Google BigQuery)</h3>
+											<p>Write queries (Aggregate Function, Date Format, Join, CTE, Window Function) and Exploratory Data Analysis (EDA) using SQL as a tool, BigQuery by Google to be specific.</p>
+											<a href="https://docs.google.com/presentation/d/1OfY8eiIfDRR5VXKP-wtCSnJAMH3KdeTLWR_QGijCiUI/edit?usp=sharing" target="_blank" class="special">Full Project (Click here)</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/spreadsheet.jpg" alt="" /></a>
+											<h3 class="major">EDA (Spreadsheet)</h3>
+											<p>Basic statistics, dataset cleaning, and Exploratory Data Analysis (EDA) using spreadsheet as a tool.</p>
+											<a href="https://docs.google.com/spreadsheets/d/1cXj1kw6ArRcxDDMXNGZh1Ie2bE-gwgwlweqPxyffxXs/edit?usp=sharing" target="_blank" class="special">Full Project (Click here)</a>
+										</article>
+									</section>
+									<!--<ul class="actions">
+										<li><a href="#" class="button">Browse All</a></li>
+									</ul>-->
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+				<?php
+if(!empty($_POST["send"])) {
+	$name = $_POST["name"];
+  $email = $_POST["email"];
+	$message = $_POST["message"];
+	$toEmail = "r.fauzantaufik@gmail.com";
+  
+	$mailHeaders = "Name: " . $name .
+	"\r\n Email: ". $email  .
+	"\r\n Message: " . $message . "\r\n";
+
+	if(mail($toEmail, $name, $mailHeaders)) {
+	    $message = "Your contact information is received successfully.";
+	}
+}
+?>
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Hi, you can call me Ozan. I am currently a fresh graduate from Mersin University’s Economics programme, actively pursuing opportunities to kick-start my career in data analytics as highly passionate about working related to numbers, analytics, and big data. Feel free to contact me!</p>
+							<form method="post">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+									<?php if (! empty($message)) {?>
+										<?php echo $message; ?>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Çiftlikköy Mah, Yenişehir<br />
+									Mersin, Turkey
+								</li>
+								<li class="icon solid fa-phone">+90 (552) 450-3397</li>
+								<li class="icon solid fa-envelope"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=r.fauzantaufik@gmail.com&su=SUBJECT&body=BODY" target="_blank">r.fauzantaufik@gmail.com</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/fauzantr" target="_blank">github.com/fauzantr</a></li>
+								<li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/fauzantr" target="_blank">linkedin.com/in/fauzantr</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; TROZAN11. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+	</body>
+</html>
