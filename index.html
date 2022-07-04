@@ -133,27 +133,11 @@
 					</section>
 
 				<!-- Footer -->
-				<?php
-if(!empty($_POST["send"])) {
-	$name = $_POST["name"];
-  $email = $_POST["email"];
-	$message = $_POST["message"];
-	$toEmail = "r.fauzantaufik@gmail.com";
-  
-	$mailHeaders = "Name: " . $name .
-	"\r\n Email: ". $email  .
-	"\r\n Message: " . $message . "\r\n";
-
-	if(mail($toEmail, $name, $mailHeaders)) {
-	    $message = "Your contact information is received successfully.";
-	}
-}
-?>
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 							<p>Hi, you can call me Ozan. I am currently a fresh graduate from Mersin University’s Economics programme, actively pursuing opportunities to kick-start my career in data analytics as highly passionate about working related to numbers, analytics, and big data. Feel free to contact me!</p>
-							<form method="post">
+							<form method="post" action="mailto:r.fauzantaufik@gmail.com">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -170,8 +154,6 @@ if(!empty($_POST["send"])) {
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
-									<?php if (! empty($message)) {?>
-										<?php echo $message; ?>
 								</ul>
 							</form>
 							<ul class="contact">
